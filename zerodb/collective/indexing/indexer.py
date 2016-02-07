@@ -1,6 +1,6 @@
 from zope.interface import implements
-from Products.Archetypes.CatalogMultiplex import CatalogMultiplex
-from Products.CMFCore.CMFCatalogAware import CMFCatalogAware
+#from Products.Archetypes.CatalogMultiplex import CatalogMultiplex
+#from Products.CMFCore.CMFCatalogAware import CMFCatalogAware
 from collective.indexing.interfaces import IIndexQueueProcessor
 
 
@@ -20,7 +20,7 @@ def getOwnIndexMethod(obj, name):
         if monkey is not None and method is not monkey:
             return method
 
-
+'''
 def getDispatcher(obj, name):
     """ return named indexing method according on the used mixin class """
     if isinstance(obj, CatalogMultiplex):
@@ -41,12 +41,13 @@ def index(obj, attributes=None):
     if op is not None:
         op(obj)
 
+'''
 
 # used instead of a lambda as ZODB dump does not know how to serialize those
 def notifyModified(*args):
     pass
 
-
+'''
 def reindex(obj, attributes=None):
     op = getDispatcher(obj, 'reindex')
     if op is not None:
@@ -64,6 +65,7 @@ def unindex(obj):
     if op is not None:
         op(obj)
 
+'''
 
 class IPortalCatalogQueueProcessor(IIndexQueueProcessor):
     """ an index queue processor for the standard portal catalog via

@@ -42,7 +42,7 @@ def reindexObject(self, idxs=None):
     if obj is not None and indexer is not None:
         indexer.reindex(obj, idxs)
 
-
+'''
 # set up dispatcher containers for the original methods and
 # hook up the new methods if that hasn't been done before...
 from Products.Archetypes.BaseBTreeFolder import BaseBTreeFolder
@@ -115,3 +115,4 @@ def setupFlush():
         debug('patched %s', str(CatalogTool.getCounter))
 
 setupFlush()
+'''

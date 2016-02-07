@@ -22,9 +22,9 @@ INSTALL_REQUIRES = [
     'zope.event',
     'zope.lifecycleevent',
     'zope.publisher',
-    'Products.Archetypes',
-    'Products.CMFCore',
-    'Acquisition',
+    #'Products.Archetypes',
+    #'Products.CMFCore',
+    #'Acquisition',
     ]
 
 setup(
